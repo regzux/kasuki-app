@@ -1,4 +1,4 @@
-import { useNavigation } from "expo-router";
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Image,
@@ -11,7 +11,7 @@ import {
 import { Button, Text, TextInput } from "react-native-paper";
 
 export default function OnboardingScreen() {
-  const navigation = useNavigation();
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,7 +54,7 @@ export default function OnboardingScreen() {
           <Button
             mode="elevated"
             style={styles.signupButton}
-            onPress={() => navigation.navigate("signup")}
+            onPress={() => router.push("/signup")}
           >
             Create an account
           </Button>
