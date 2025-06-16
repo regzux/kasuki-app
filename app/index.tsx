@@ -45,8 +45,12 @@ export default function OnboardingScreen() {
             onChangeText={(text) => setPassword(text)}
             style={styles.input}
           />
-          <Button mode="contained" style={styles.loginButton}>
-            LOGIN
+          <Button
+            mode="contained"
+            style={styles.loginButton}
+            labelStyle={{ fontSize: 18 }}
+          >
+            Login
           </Button>
         </View>
         <View style={styles.signupContainer}>
@@ -54,6 +58,7 @@ export default function OnboardingScreen() {
           <Button
             mode="elevated"
             style={styles.signupButton}
+            labelStyle={{ fontSize: 18 }}
             onPress={() => router.push("/signup")}
           >
             Create an account

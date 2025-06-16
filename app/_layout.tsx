@@ -69,6 +69,14 @@ export default function RootLayout() {
     <PaperProvider theme={theme}>
       <Stack>
         <Stack.Screen name="signup" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="register-customer"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="register-store-owner"
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>

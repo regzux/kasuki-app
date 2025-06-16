@@ -15,6 +15,15 @@ export default function SignupScreen() {
 
   const [role, setRole] = useState<"customer" | "storeOwner">("customer");
 
+  const handleContinue = () => {
+    console.log(`Selected role: ${role}`);
+    if (role === "customer") {
+      navigation.navigate("register-customer");
+    } else if (role === "storeOwner") {
+      navigation.navigate("register-store-owner");
+    }
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -23,7 +32,7 @@ export default function SignupScreen() {
         <View
           style={{
             display: "flex",
-            gap: 12
+            gap: 10
           }}
         >
           <Text variant="displayLarge">Kumusta, Suki!</Text>
@@ -105,9 +114,7 @@ export default function SignupScreen() {
             justifyContent: "center"
           }}
           labelStyle={{ fontSize: 18 }}
-          onPress={() => {
-            console.log(`Selected role: ${role}`);
-          }}
+          onPress={handleContinue}
         >
           Continue
         </Button>
