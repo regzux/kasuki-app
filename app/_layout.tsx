@@ -71,7 +71,7 @@ export default function RootLayout() {
         <Stack.Screen name="signup" options={{ headerShown: false }} />
         <Stack.Screen
           name="register-customer"
-          options={{ title: "Register Customer", headerBackTitle: "Back" }}
+          options={{ title: "", headerBackTitle: "Back" }}
         />
         <Stack.Screen
           name="register-store-owner"

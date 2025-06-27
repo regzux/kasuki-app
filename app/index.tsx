@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   loginFormContainer: {
     display: "flex",
-    gap: 10,
+    gap: 20,
     flexDirection: "column",
     width: "100%"
   },
